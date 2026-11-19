@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahmed Alsharqwi — Full-Stack Web Developer & Automation Engineer</title>
+<meta name="description" content="Ahmed Alsharqwi builds and ships complete web products end to end: bilingual Arabic/English web apps, e-commerce analytics, business automation, and AI data evaluation. Egypt, remote.">
+<meta property="og:title" content="Ahmed Alsharqwi — Full-Stack Web Developer & Automation Engineer">
+<meta property="og:description" content="Live products, real systems: Mongez AI, AutoScan, Smart Store, and AI content automation. Arabic/English, RTL-native.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230d7377'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial'>A</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cairo:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14232b; --muted:#5b6b73; --line:#e3eaec; --bg:#f7f9f9; --card:#ffffff;
+    --teal:#0d7377; --teal-dark:#0a5c60; --sand:#f4efe6; --radius:18px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .ar{font-family:'Cairo','Inter',sans-serif}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+  a{color:var(--teal);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  /* Nav */
+  nav{position:sticky;top:0;z-index:50;background:rgba(247,249,249,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .brand{font-weight:800;font-size:1.05rem;letter-spacing:-.02em;color:var(--ink)}
+  .brand span{color:var(--teal)}
+  .navlinks{display:flex;gap:22px;font-size:.92rem;font-weight:500}
+  .navlinks a{color:var(--muted)}
+  .navlinks a:hover{color:var(--teal);text-decoration:none}
+  @media(max-width:640px){.navlinks{display:none}}
+
+  /* Hero */
+  header.hero{padding:88px 0 64px;border-bottom:1px solid var(--line);background:
+    radial-gradient(1000px 400px at 85% -10%, rgba(13,115,119,.10), transparent 60%),var(--bg)}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);background:#e6f2f2;border:1px solid #cfe5e5;padding:6px 14px;border-radius:999px}
+  .eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:#1ba784}
+  h1{font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.12;letter-spacing:-.03em;font-weight:800;margin:22px 0 6px}
+  h1 .accent{color:var(--teal)}
+  .ar-name{font-size:clamp(1.2rem,2.6vw,1.6rem);color:var(--muted);font-weight:700;margin-bottom:18px}
+  .lede{max-width:640px;font-size:1.08rem;color:var(--muted)}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:12px;font-weight:600;font-size:.95rem;border:1px solid transparent;transition:transform .12s ease,box-shadow .12s ease}
+  .btn:hover{text-decoration:none;transform:translateY(-1px)}
+  .btn-primary{background:var(--teal);color:#fff;box-shadow:0 6px 18px rgba(13,115,119,.25)}
+  .btn-primary:hover{background:var(--teal-dark)}
+  .btn-ghost{background:#fff;border-color:var(--line);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--teal);color:var(--teal)}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:34px;font-size:.9rem;color:var(--muted)}
+  .hero-meta b{color:var(--ink);font-weight:600}
+
+  /* Sections */
+  section{padding:72px 0;border-bottom:1px solid var(--line)}
+  .kicker{font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
+  h2{font-size:clamp(1.6rem,3.4vw,2.2rem);letter-spacing:-.02em;font-weight:800;margin-bottom:14px}
+  .sub{color:var(--muted);max-width:640px;margin-bottom:40px}
+
+  /* Projects */
+  .project{display:grid;grid-template-columns:1.05fr 1fr;gap:44px;align-items:center;padding:34px 0}
+  .project + .project{border-top:1px dashed var(--line)}
+  .project.flip .shot{order:2}
+  @media(max-width:820px){.project{grid-template-columns:1fr;gap:24px}.project.flip .shot{order:0}}
+  .shot{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);box-shadow:0 14px 34px rgba(20,35,43,.10);background:#fff}
+  .shot img{display:block;width:100%;height:auto}
+  .tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);background:#e6f2f2;padding:4px 12px;border-radius:999px;margin-bottom:12px}
+  .project h3{font-size:1.45rem;font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
+  .project h3 .ar{font-size:1.05rem;color:var(--muted);font-weight:700}
+  .project p{color:var(--muted);font-size:.98rem;margin-bottom:14px}
+  .stack{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+  .stack li{list-style:none;font-size:.78rem;font-weight:600;color:var(--ink);background:#fff;border:1px solid var(--line);padding:4px 12px;border-radius:999px}
+  .plink{font-weight:600;font-size:.95rem}
+  .plink::after{content:" →"}
+
+  /* Skills */
+  .skillgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+  .skillcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  .skillcard h4{font-size:.95rem;font-weight:700;margin-bottom:12px;color:var(--teal)}
+  .skillcard ul{list-style:none}
+  .skillcard li{font-size:.9rem;color:var(--muted);padding:4px 0 4px 20px;position:relative}
+  .skillcard li::before{content:"✓";position:absolute;left:0;color:var(--teal);font-weight:700}
+
+  /* Journey */
+  .timeline{border-left:2px solid var(--line);margin-left:6px}
+  .titem{position:relative;padding:0 0 34px 32px}
+  .titem::before{content:"";position:absolute;left:-8px;top:6px;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid var(--teal)}
+  .titem .when{font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal)}
+  .titem h4{font-size:1.08rem;font-weight:700;margin:4px 0}
+  .titem p{color:var(--muted);font-size:.93rem;max-width:640px}
+
+  /* Certifications */
+  .certgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+  .cert{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+  .cert .badge{font-size:1.5rem}
+  .cert h4{font-size:1rem;font-weight:700;margin:10px 0 4px}
+  .cert p{color:var(--muted);font-size:.88rem}
+
+  /* Contact */
+  .contact{background:var(--ink);color:#eef4f5;border-bottom:none}
+  .contact .kicker{color:#7fd1d4}
+  .contact h2{color:#fff}
+  .contact .sub{color:#a9bcc2}
+  .contact .btn-primary{background:#14a3a8;box-shadow:none}
+  .contact .btn-primary:hover{background:#17b8bd}
+  .contact .btn-ghost{background:transparent;border-color:#3a4c54;color:#eef4f5}
+  .contact .btn-ghost:hover{border-color:#7fd1d4;color:#7fd1d4}
+  footer{padding:26px 0;background:var(--ink);color:#7b8f97;font-size:.82rem;border-top:1px solid #24353d}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}
+  footer a{color:#7fd1d4}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">Ahmed<span>Alsharqwi</span></div>
+    <div class="navlinks">
+      <a href="#work">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#journey">Journey</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Available for remote projects</span>
+    <h1>Full-Stack Web Developer<br>&amp; <span class="accent">Automation Engineer</span></h1>
+    <div class="ar ar-name">أحمد الشرقاوي — مواقع ومتاجر وأنظمة عربية/إنجليزية من الفكرة للنشر</div>
+    <p class="lede">I build and ship complete web products end to end: bilingual Arabic/English web apps with native RTL, e-commerce analytics, business automation, and AI data evaluation. Everything below is live, real work.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#work">See selected work</a>
+      <a class="btn btn-ghost" href="mailto:ahmedalsharqwi2@gmail.com">ahmedalsharqwi2@gmail.com</a>
+    </div>
+    <div class="hero-meta">
+      <div><b>Egypt</b> · Remote</div>
+      <div><b>20+</b> clients &amp; projects</div>
+      <div><b>Arabic</b> native · <b>English</b> professional</div>
+    </div>
+  </div>
+</header>
+
+<section id="work">
+  <div class="wrap">
+    <div class="kicker">Selected work</div>
+    <h2>Live products, real systems</h2>
+    <p class="sub">Not mockups. These are production systems built end to end, running today.</p>
+
+    <div class="project">
+      <div class="shot"><img src="assets/mongez.jpg" alt="Mongez AI — Arabic e-commerce analytics dashboard" loading="lazy"></div>
+      <div>
+        <span class="tag">SaaS product · Live</span>
+        <h3>Mongez AI <span class="ar">· منجز</span></h3>
+        <p>A bilingual (Arabic/English) e-commerce analytics SaaS: store owners upload CSV/Excel exports from Shopify, WooCommerce, Salla or Zid, map columns, and get sales, cost, profit and trend reports with native RTL Arabic PDF/Word exports. Live with its first paying customer (5/5 review) and a verified listing on Meor.</p>
+        <ul class="stack">
+          <li>React + TypeScript</li><li>Django / Python</li><li>PostgreSQL</li><li>Docker</li><li>Native RTL</li><li>MENA payments</li>
+        </ul>
+        <a class="plink" href="https://mongezai.online/" target="_blank" rel="noopener">Visit mongezai.online</a>
+      </div>
+    </div>
+
+    <div class="project flip">
+      <div class="shot"><img src="assets/autoscan.jpg" alt="AutoScan — car inspection center website" loading="lazy"></div>
+      <div>
+        <span class="tag">Client website · Live</span>
+        <h3>AutoScan <span class="ar">· مركز أوتو اسكان لفحص السيارات</span></h3>
+        <p>A full Arabic RTL website for a car-inspection center: service catalog with pricing, inspection booking with live tracking, sample inspection reports, and WhatsApp-first contact flow, deployed on Railway.</p>
+        <ul class="stack">
+          <li>Arabic RTL design</li><li>Booking &amp; tracking</li><li>Web deployment</li><li>Railway</li>
+        </ul>
+        <a class="plink" href="https://autoscan-web-production.up.railway.app/" target="_blank" rel="noopener">Visit the live site</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <div>
+        <span class="tag">Business system · Private deployment</span>
+        <h3>Smart Store</h3>
+        <p>A complete business-management system built on Google Sheets and Google Apps Script: it connects point-of-sale data with centralized inventory and real-time sales and profit dashboards, so the owner sees the whole operation in one place. Runs inside the client's own Google Workspace, so no public link.</p>
+        <ul class="stack">
+          <li>Google Sheets</li><li>Apps Script</li><li>Dashboards</li><li>POS integration</li>
+        </ul>
+      </div>
+      <div>
+        <span class="tag">Content automation · Ongoing</span>
+        <h3>AI Content Pipelines</h3>
+        <p>A network of automated YouTube content pipelines, including a private Remotion rendering and publishing service: AI news in Egyptian Arabic, documented history stories, science discovery shorts, and story channels, from script to rendered video to scheduled upload.</p>
+        <ul class="stack">
+          <li>Remotion</li><li>Node.js</li><li>AI voice &amp; images</li><li>YouTube API</li><li>Automation</li>
+        </ul>
+        <a class="plink" href="https://github.com/ahmedalsharqwi2-gif" target="_blank" rel="noopener">GitHub profile</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="kicker">Skills</div>
+    <h2>A connected toolkit</h2>
+    <p class="sub">Web development, automation, and careful bilingual data work in one workflow.</p>
+    <div class="skillgrid">
+      <div class="skillcard">
+        <h4>Web development</h4>
+        <ul>
+          <li>React + TypeScript</li>
+          <li>Django / Python</li>
+          <li>PostgreSQL · Docker</li>
+          <li>Landing pages &amp; dashboards</li>
+          <li>Payment gateway integration</li>
+        </ul>
+      </div>
+      <div class="skillcard">
+        <h4>Automation &amp; data</h4>
+        <ul>
+          <li>Google Apps Script</li>
+          <li>Make / Integromat</li>
+          <li>REST APIs · AI API integration</li>
+          <li>Looker Studio · Excel</li>
+          <li>SPSS &amp; reliability testing</li>
+        </ul>
+      </div>
+      <div class="skillcard">
+        <h4>AI &amp; language quality</h4>
+        <ul>
+          <li>AI response evaluation</li>
+          <li>Data annotation &amp; labeling</li>
+          <li>Instruction-following evaluation</li>
+          <li>Fact checking · error identification</li>
+          <li>Bilingual content review</li>
+        </ul>
+      </div>
+      <div class="skillcard">
+        <h4>Arabic / English</h4>
+        <ul>
+          <li>Native Arabic, professional English</li>
+          <li>Full RTL localization of English sites</li>
+          <li>Arabic PDF/Word reporting</li>
+          <li>Academic &amp; publishing documents</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="journey">
+  <div class="wrap">
+    <div class="kicker">Professional journey</div>
+    <h2>Built from the details upward</h2>
+    <p class="sub">Each chapter sharpened the same instinct: find the signal, then make it useful.</p>
+    <div class="timeline">
+      <div class="titem">
+        <div class="when">2025 — Present</div>
+        <h4>Independent Business Automation Engineer</h4>
+        <p>Designing structured workflows for repetitive business processes and data pipelines: automated systems with Google Apps Script, Make, REST APIs and AI integrations, plus full web products like Mongez AI.</p>
+      </div>
+      <div class="titem">
+        <div class="when">2024 — 2025</div>
+        <h4>Independent Editorial &amp; Document Specialist</h4>
+        <p>Reviewed and formatted complex bilingual Arabic RTL and English LTR documents, with detailed quality checks across academic research, financial reports, and publishing files.</p>
+      </div>
+      <div class="titem">
+        <div class="when">2022 — 2024</div>
+        <h4>Independent Data &amp; Business Analytics Specialist</h4>
+        <p>Analyzed structured business data (sales, inventory, profitability, operational KPIs) for 20+ clients and projects, validated numerical information, and built dashboards for real-time monitoring. Supported a 200-participant academic research project with SPSS, including Cronbach's Alpha reliability testing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certifications">
+  <div class="wrap">
+    <div class="kicker">Certifications &amp; education</div>
+    <h2>Learning that travels forward</h2>
+    <p class="sub"></p>
+    <div class="certgrid">
+      <div class="cert">
+        <div class="badge">✦</div>
+        <h4>AI Ambassador Certification</h4>
+        <p>Ministry of Communications and Information Technology (MCIT), Egypt, in partnership with the National Telecommunication Institute (NTI) — official AI Ambassadors Program.</p>
+      </div>
+      <div class="cert">
+        <div class="badge">✦</div>
+        <h4>Data Analyst Specialist — DEPI</h4>
+        <p>Digital Egypt Pioneers Program, Ministry of Communications and Information Technology, Egypt. Data analytics track, 2025–2026.</p>
+      </div>
+      <div class="cert">
+        <div class="badge">✦</div>
+        <h4>B.Sc. Electronics Engineering</h4>
+        <p>Military Technical College, Egypt — graduated 2007.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="kicker">Contact</div>
+    <h2>Let's build something that ships</h2>
+    <p class="sub">Business websites, e-commerce stores with local payments, landing pages, custom web apps, dashboards and reporting, AI features, and full Arabic/RTL localization. Clean documented code, deployment done for you, and post-delivery support.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="mailto:ahmedalsharqwi2@gmail.com">Email me</a>
+      <a class="btn btn-ghost" href="https://github.com/ahmedalsharqwi2-gif" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn btn-ghost" href="https://nafezly.com/u/AhmedAlsharqwi" target="_blank" rel="noopener">Nafezly portfolio</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 Ahmed Alsharqwi · Egypt, remote</div>
+    <div><a href="mailto:ahmedalsharqwi2@gmail.com">ahmedalsharqwi2@gmail.com</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
