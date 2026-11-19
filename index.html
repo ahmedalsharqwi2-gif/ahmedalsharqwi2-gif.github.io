@@ -80,10 +80,11 @@
   .project-full{padding:34px 0;border-top:1px dashed var(--line)}
   .project-full h3{font-size:1.45rem;font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
   .project-full p{color:var(--muted);font-size:.98rem;margin-bottom:14px;max-width:720px}
-  .gallery{display:flex;gap:14px;overflow-x:auto;padding:16px 2px 10px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
-  .gallery img{height:430px;width:auto;border-radius:14px;border:1px solid var(--line);box-shadow:0 10px 24px rgba(20,35,43,.10);scroll-snap-align:start;flex:0 0 auto;background:#fff}
+  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;padding:16px 2px 10px}
+  .gallery figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 10px 24px rgba(20,35,43,.10);padding:12px}
+  .gallery img{display:block;width:100%;height:auto;border-radius:8px}
   .gnote{font-size:.8rem;color:var(--muted);margin-top:2px}
-  @media(max-width:640px){.gallery img{height:350px}}
+  @media(max-width:680px){.gallery{grid-template-columns:1fr}}
 
   /* Skills */
   .skillgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
@@ -195,12 +196,11 @@
         <li>Google Sheets</li><li>Apps Script</li><li>Dashboards</li><li>POS integration</li><li>CRM</li><li>Arabic RTL</li>
       </ul>
       <div class="gallery">
-        <img src="assets/smartstore-dashboard.jpg" alt="Smart Store dashboard — quick sale entry and financial summary" loading="lazy">
-        <img src="assets/smartstore-financial.jpg" alt="Smart Store — monthly profit and loss analysis" loading="lazy">
-        <img src="assets/smartstore-inventory.jpg" alt="Smart Store — inventory with stock levels and alerts" loading="lazy">
-        <img src="assets/smartstore-crm.jpg" alt="Smart Store — customer CRM with VIP tracking" loading="lazy">
-        <img src="assets/smartstore-sales.jpg" alt="Smart Store — automatic sales log" loading="lazy">
-        <img src="assets/smartstore-goals.jpg" alt="Smart Store — monthly goals and planning" loading="lazy">
+        <figure><img src="assets/smartstore-dashboard.jpg" alt="Smart Store dashboard — quick sale entry and financial summary" loading="lazy"></figure>
+        <figure><img src="assets/smartstore-inventory.jpg" alt="Smart Store — inventory with stock levels and alerts" loading="lazy"></figure>
+        <figure><img src="assets/smartstore-sales.jpg" alt="Smart Store — automatic sales log" loading="lazy"></figure>
+        <figure><img src="assets/smartstore-expenses.jpg" alt="Smart Store — expenses log by category" loading="lazy"></figure>
+        <figure><img src="assets/smartstore-settings.jpg" alt="Smart Store — system settings in Qatari riyal" loading="lazy"></figure>
       </div>
       <p class="gnote">Real system screens, shown with sample data.</p>
     </div>
