@@ -80,11 +80,12 @@
   .project-full{padding:34px 0;border-top:1px dashed var(--line)}
   .project-full h3{font-size:1.45rem;font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
   .project-full p{color:var(--muted);font-size:.98rem;margin-bottom:14px;max-width:720px}
-  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;padding:16px 2px 10px;align-items:start}
+  .gallery{display:flex;gap:16px;padding:16px 2px 10px;align-items:flex-start}
+  .gcol{flex:1;display:flex;flex-direction:column;gap:16px;min-width:0}
   .gallery figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 10px 24px rgba(20,35,43,.10);padding:12px}
   .gallery img{display:block;width:100%;height:auto;border-radius:8px}
   .gnote{font-size:.8rem;color:var(--muted);margin-top:2px}
-  @media(max-width:680px){.gallery{grid-template-columns:1fr}}
+  @media(max-width:680px){.gallery{flex-direction:column}}
 
   /* Skills */
   .skillgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
@@ -196,11 +197,15 @@
         <li>Google Sheets</li><li>Apps Script</li><li>Dashboards</li><li>POS integration</li><li>CRM</li><li>Arabic RTL</li>
       </ul>
       <div class="gallery">
-        <figure><img src="assets/smartstore-dashboard.jpg" alt="Smart Store dashboard — quick sale entry and financial summary" loading="lazy"></figure>
-        <figure><img src="assets/smartstore-inventory.jpg" alt="Smart Store — inventory with stock levels and alerts" loading="lazy"></figure>
-        <figure><img src="assets/smartstore-sales.jpg" alt="Smart Store — automatic sales log" loading="lazy"></figure>
-        <figure><img src="assets/smartstore-expenses.jpg" alt="Smart Store — expenses log by category" loading="lazy"></figure>
-        <figure><img src="assets/smartstore-settings.jpg" alt="Smart Store — system settings in Qatari riyal" loading="lazy"></figure>
+        <div class="gcol">
+          <figure><img src="assets/smartstore-dashboard.jpg" alt="Smart Store dashboard — quick sale entry and financial summary" loading="lazy"></figure>
+          <figure><img src="assets/smartstore-inventory.jpg" alt="Smart Store — inventory with stock levels and alerts" loading="lazy"></figure>
+        </div>
+        <div class="gcol">
+          <figure><img src="assets/smartstore-sales.jpg" alt="Smart Store — automatic sales log" loading="lazy"></figure>
+          <figure><img src="assets/smartstore-expenses.jpg" alt="Smart Store — expenses log by category" loading="lazy"></figure>
+          <figure><img src="assets/smartstore-settings.jpg" alt="Smart Store — system settings in Qatari riyal" loading="lazy"></figure>
+        </div>
       </div>
       <p class="gnote">Real system screens, shown with sample data.</p>
     </div>
